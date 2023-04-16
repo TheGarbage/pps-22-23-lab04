@@ -14,6 +14,12 @@ object List:
 
   def cons[E](h: E, t: List[E]): List[E] = Cons(h, t)
 
+//  def List[A](a: A*): List[A] =
+//    def recursive(a: Seq[A]): List[A] = a match
+//      case Cons(h, t) => Cons(h, recursive(t))
+//      case _ => Nil
+//    recursive(a)
+
   def sum(l: List[Int]): Int = l match
     case Cons(h, t) => h + sum(t)
     case _ => 0
